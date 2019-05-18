@@ -9,7 +9,7 @@ public class CacheTest {
     private Cache<String, String> cache;
 
     @Before
-    public void setUp() {
+    public void setup() {
         this.cache = new Cache<>();
     }
 

@@ -247,7 +247,7 @@
         <configuration>
           <path>/codelab-website</path>
           <port>16060</port>
-          <uriEncoding>utf-8</uriEncoding>
+          <uriEncoding>UTF-8</uriEncoding>
         </configuration>
       </plugin>
       <plugin>
