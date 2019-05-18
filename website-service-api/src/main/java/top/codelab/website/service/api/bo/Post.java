@@ -5,24 +5,21 @@ public class Post {
     private PostInfo info;
     private String content;
 
-    public Post(PostInfo info, String content) {
-        this.info = info;
-        this.content = content;
-    }
-
     public PostInfo getInfo() {
         return this.info;
     }
 
-    public void setInfo(PostInfo info) {
+    public Post setInfo(PostInfo info) {
         this.info = info;
+        return this;
     }
 
     public String getContent() {
         return this.content;
     }
 
-    public void setContent(String content) {
+    public Post setContent(String content) {
         this.content = content;
+        return this;
     }
 }
