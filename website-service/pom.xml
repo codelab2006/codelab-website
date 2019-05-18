@@ -38,36 +38,36 @@
       <groupId>org.eclipse.jgit</groupId>
       <artifactId>org.eclipse.jgit</artifactId>
     </dependency>
-    <!-- ********** modules ********** -->
+    <!-- website-service-api -->
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>website-service-api</artifactId>
     </dependency>
+    <!-- markdown-repository -->
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>markdown-repository</artifactId>
     </dependency>
-    <!-- ***************************** -->
-    <!-- ********** springframework ********** -->
+    <!-- spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
     </dependency>
+    <!-- spring-beans -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
     </dependency>
-    <!-- ************************************* -->
-    <!-- ********** test ********** -->
+    <!-- easymock -->
     <dependency>
       <groupId>org.easymock</groupId>
       <artifactId>easymock</artifactId>
     </dependency>
+    <!-- junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
-    <!-- ************************** -->
   </dependencies>
 
 </project>

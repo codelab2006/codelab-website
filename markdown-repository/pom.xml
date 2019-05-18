@@ -18,12 +18,11 @@
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
     </dependency>
-    <!-- ********** test ********** -->
+    <!-- junit -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
     </dependency>
-    <!-- ************************** -->
   </dependencies>
 
 </project>
