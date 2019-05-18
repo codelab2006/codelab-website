@@ -36,12 +36,6 @@
 
   <dependencyManagement>
     <dependencies>
-      <!-- freemarker -->
-      <dependency>
-        <groupId>org.freemarker</groupId>
-        <artifactId>freemarker</artifactId>
-        <version>${freemarker.version}</version>
-      </dependency>
       <!-- flexmark -->
       <dependency>
         <groupId>com.vladsch.flexmark</groupId>
@@ -66,6 +60,19 @@
         <artifactId>log4j-api</artifactId>
         <version>${log4j.version}</version>
       </dependency>
+      <!-- org.eclipse.jgit -->
+      <dependency>
+        <groupId>org.eclipse.jgit</groupId>
+        <artifactId>org.eclipse.jgit</artifactId>
+        <version>${org.eclipse.jgit.version}</version>
+      </dependency>
+      <!-- ******************** runtime ******************** -->
+      <!-- freemarker -->
+      <dependency>
+        <groupId>org.freemarker</groupId>
+        <artifactId>freemarker</artifactId>
+        <version>${freemarker.version}</version>
+      </dependency>
       <!-- log4j-core -->
       <dependency>
         <groupId>org.apache.logging.log4j</groupId>
@@ -78,13 +85,8 @@
         <artifactId>log4j-web</artifactId>
         <version>${log4j.version}</version>
       </dependency>
-      <!-- org.eclipse.jgit -->
-      <dependency>
-        <groupId>org.eclipse.jgit</groupId>
-        <artifactId>org.eclipse.jgit</artifactId>
-        <version>${org.eclipse.jgit.version}</version>
-      </dependency>
-      <!-- ********** modules ********** -->
+      <!-- ************************************************* -->
+      <!-- ******************** modules ******************** -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>website-service-api</artifactId>
@@ -100,8 +102,8 @@
         <artifactId>markdown-repository</artifactId>
         <version>${project.version}</version>
       </dependency>
-      <!-- ***************************** -->
-      <!-- ********** springframework ********** -->
+      <!-- ************************************************* -->
+      <!-- ******************** springframework ******************** -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
@@ -132,8 +134,8 @@
         <artifactId>spring-core</artifactId>
         <version>${spring.version}</version>
       </dependency>
-      <!-- ************************************* -->
-      <!-- ********** test ********** -->
+      <!-- ********************************************************* -->
+      <!-- ******************** test ******************** -->
       <dependency>
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
@@ -146,15 +148,15 @@
         <version>${junit.version}</version>
         <scope>test</scope>
       </dependency>
-      <!-- ************************** -->
-      <!-- ********** provided ********* -->
+      <!-- ********************************************** -->
+      <!-- ******************** provided ******************** -->
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
         <version>${servlet.api.version}</version>
         <scope>provided</scope>
       </dependency>
-      <!-- ***************************** -->
+      <!-- ************************************************** -->
     </dependencies>
   </dependencyManagement>
 
@@ -220,23 +222,23 @@
             <configuration>
               <failOnWarning>true</failOnWarning>
               <outputXML>true</outputXML>
-<!--              <ignoredUnusedDeclaredDependencies>-->
-<!--                <ignoredUnusedDeclaredDependency>-->
-<!--                  org.springframework:spring-context-support:jar:${spring.version}-->
-<!--                </ignoredUnusedDeclaredDependency>-->
-<!--                <ignoredUnusedDeclaredDependency>-->
-<!--                  org.freemarker:freemarker:jar:${freemarker.version}-->
-<!--                </ignoredUnusedDeclaredDependency>-->
-<!--                <ignoredUnusedDeclaredDependency>-->
-<!--                  top.codelab:website-service:jar:${project.version}-->
-<!--                </ignoredUnusedDeclaredDependency>-->
-<!--                <ignoredUnusedDeclaredDependency>-->
-<!--                  org.apache.logging.log4j:log4j-core:jar:${log4j.version}-->
-<!--                </ignoredUnusedDeclaredDependency>-->
-<!--                <ignoredUnusedDeclaredDependency>-->
-<!--                  org.apache.logging.log4j:log4j-web:jar:${log4j.version}-->
-<!--                </ignoredUnusedDeclaredDependency>-->
-<!--              </ignoredUnusedDeclaredDependencies>-->
+              <ignoredUnusedDeclaredDependencies>
+                <ignoredUnusedDeclaredDependency>
+                  org.freemarker:freemarker:jar:${freemarker.version}
+                </ignoredUnusedDeclaredDependency>
+                <ignoredUnusedDeclaredDependency>
+                  top.codelab:website-service:jar:${project.version}
+                </ignoredUnusedDeclaredDependency>
+                <ignoredUnusedDeclaredDependency>
+                  org.apache.logging.log4j:log4j-core:jar:${log4j.version}
+                </ignoredUnusedDeclaredDependency>
+                <ignoredUnusedDeclaredDependency>
+                  org.apache.logging.log4j:log4j-web:jar:${log4j.version}
+                </ignoredUnusedDeclaredDependency>
+                <ignoredUnusedDeclaredDependency>
+                  org.springframework:spring-context-support:jar:${spring.version}
+                </ignoredUnusedDeclaredDependency>
+              </ignoredUnusedDeclaredDependencies>
             </configuration>
           </execution>
         </executions>
