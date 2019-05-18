@@ -33,48 +33,51 @@
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-web</artifactId>
     </dependency>
-    <!-- ********** modules ********** -->
+    <!-- website-service-api -->
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>website-service-api</artifactId>
     </dependency>
+    <!-- website-service -->
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>website-service</artifactId>
     </dependency>
-    <!-- ***************************** -->
-    <!-- ********** springframework ********** -->
+    <!-- spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-webmvc</artifactId>
     </dependency>
+    <!-- spring-web -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
     </dependency>
+    <!-- spring-context -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
     </dependency>
+    <!-- spring-context-support -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context-support</artifactId>
     </dependency>
+    <!-- spring-beans -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-beans</artifactId>
     </dependency>
+    <!-- spring-core -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
     </dependency>
-    <!-- ************************************* -->
-    <!-- ********** provided ********* -->
+    <!-- javax.servlet-api -->
     <dependency>
       <groupId>javax.servlet</groupId>
       <artifactId>javax.servlet-api</artifactId>
     </dependency>
-    <!-- ***************************** -->
   </dependencies>
 
   <build>
