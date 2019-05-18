@@ -41,7 +41,7 @@ class BlogReadController {
 
     private static final String ATTR_FILTER_BY_TAG = "filterByTag";
     private static final String ATTR_FILTER_BY_LAST_MODIFIED_TIME = "filterByLastModifiedTime";
-    private static final String ATTR_FILTER_RESULT_COUNT = "filterResultCount";
+    private static final String ATTR_FILTER_RESULT_COUNT = "filteredResultCount";
 
     private static final Logger logger = LogManager.getLogger();
 

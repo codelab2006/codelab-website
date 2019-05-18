@@ -7,7 +7,7 @@
       <#include "/includes/tabs-nav.ftl">
     </div>
     <div class="flex-grow-1">
-      <#if filterResultCount??>
+      <#if filteredResultCount??>
       <div class="d-flex mb-4 align-items-center bg-primary text-white p-2">
         <#assign filters=[{'name':filterByTag!'', 'label':'标签'},
                           {'name':filterByLastModifiedTime!'', 'label':'最后修改时间'}]>
@@ -17,7 +17,7 @@
           <span class="mr-2">${filter.name}</span>
           </#if>
         </#list>
-        <span class="bracket">共${filterResultCount}篇文章</span>
+        <span class="bracket">共${filteredResultCount}篇文章</span>
       </div>
       </#if>
       <#include "/includes/post-info-list.ftl">
