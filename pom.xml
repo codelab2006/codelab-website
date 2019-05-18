@@ -66,6 +66,7 @@
         <artifactId>org.eclipse.jgit</artifactId>
         <version>${org.eclipse.jgit.version}</version>
       </dependency>
+
       <!-- ******************** runtime ******************** -->
       <!-- freemarker -->
       <dependency>
@@ -89,62 +90,76 @@
         <scope>runtime</scope>
       </dependency>
       <!-- ************************************************* -->
+
       <!-- ******************** modules ******************** -->
+      <!-- website-service-api -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>website-service-api</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <!-- website-service -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>website-service</artifactId>
         <version>${project.version}</version>
       </dependency>
+      <!-- markdown-repository -->
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>markdown-repository</artifactId>
         <version>${project.version}</version>
       </dependency>
       <!-- ************************************************* -->
+
       <!-- ******************** springframework ******************** -->
+      <!-- spring-webmvc -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-webmvc</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      <!-- spring-web -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-web</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      <!-- spring-context -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      <!-- spring-context-support -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-context-support</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      <!-- spring-beans -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-beans</artifactId>
         <version>${spring.version}</version>
       </dependency>
+      <!-- spring-core -->
       <dependency>
         <groupId>org.springframework</groupId>
         <artifactId>spring-core</artifactId>
         <version>${spring.version}</version>
       </dependency>
       <!-- ********************************************************* -->
+
       <!-- ******************** test ******************** -->
+      <!-- easymock -->
       <dependency>
         <groupId>org.easymock</groupId>
         <artifactId>easymock</artifactId>
         <version>${easymock.version}</version>
         <scope>test</scope>
       </dependency>
+      <!-- junit -->
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
@@ -152,7 +167,9 @@
         <scope>test</scope>
       </dependency>
       <!-- ********************************************** -->
+
       <!-- ******************** provided ******************** -->
+      <!-- javax.servlet-api -->
       <dependency>
         <groupId>javax.servlet</groupId>
         <artifactId>javax.servlet-api</artifactId>
@@ -160,6 +177,7 @@
         <scope>provided</scope>
       </dependency>
       <!-- ************************************************** -->
+
     </dependencies>
   </dependencyManagement>
 
