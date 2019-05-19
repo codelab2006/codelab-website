@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.*;
 import top.codelab.website.web.interceptor.HandlerInterceptor;
 import top.codelab.website.web.interceptor.WebRequestInterceptor;
@@ -11,6 +12,7 @@ import top.codelab.website.web.interceptor.WebRequestInterceptor;
 @Configuration
 @EnableWebMvc
 @ComponentScan({"top.codelab.website.web"})
+@PropertySource("file:${CODELAB_WEBSITE_CONFIG}")
 @ImportResource({"classpath:web-config.xml"})
 class WebConfig implements WebMvcConfigurer {
 
