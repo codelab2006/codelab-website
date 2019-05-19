@@ -30,7 +30,7 @@ public class MarkdownRepository {
 
     private final Cache<String, Object> cache;
 
-    MarkdownRepository(String documentPath, String resourcePath) {
+    public MarkdownRepository(String documentPath, String resourcePath) {
         this.documentPath = this.getPath(this.appendTrailingSlash(documentPath));
         this.resourcePath = this.getPath(this.appendTrailingSlash(resourcePath));
         this.cache = new Cache<>();
