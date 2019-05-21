@@ -3,6 +3,7 @@ package top.codelab.website;
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
+import top.codelab.website.web.filter.MDCFilter;
 
 import javax.servlet.Filter;
 import java.nio.charset.StandardCharsets;
@@ -27,6 +28,7 @@ class WebApplicationInitializer extends AbstractAnnotationConfigDispatcherServle
     @Override
     protected Filter[] getServletFilters() {
         return new Filter[]{
+                new MDCFilter(),
                 // new CorsFilter(),
                 new CommonsRequestLoggingFilter(),
                 new CharacterEncodingFilter(StandardCharsets.UTF_8.name())
