@@ -7,7 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.servlet.ModelAndView;
-import top.codelab.website.web.exception.NotFoundException;
+import top.codelab.common.exception.NotFoundException;
 import top.codelab.website.web.filter.MDCFilter;
 
 @org.springframework.web.bind.annotation.ControllerAdvice({"top.codelab.website.web.controller"})
