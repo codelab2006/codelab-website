@@ -1,6 +1,6 @@
 package top.codelab.markdown;
 
-import top.codelab.markdown.exception.MarkdownRepositoryException;
+import top.codelab.markdown.exception.MarkdownRepositorInternalServerException;
 import top.codelab.markdown.tree.FileNode;
 
 import java.io.IOException;
@@ -18,7 +18,7 @@ public class MarkdownFile {
             this.fileNode = fileNode;
             this.lines = Files.readAllLines(this.fileNode.getPath());
         } catch (IOException e) {
-            throw new MarkdownRepositoryException(e);
+            throw new MarkdownRepositorInternalServerException(e);
         }
     }
 
