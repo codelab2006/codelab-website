@@ -43,6 +43,11 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>website-service</artifactId>
     </dependency>
+    <!-- common-exception -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>common-exception</artifactId>
+    </dependency>
     <!-- spring-webmvc -->
     <dependency>
       <groupId>org.springframework</groupId>
