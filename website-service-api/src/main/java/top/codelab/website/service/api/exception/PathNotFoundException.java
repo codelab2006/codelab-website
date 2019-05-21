@@ -1,6 +1,8 @@
 package top.codelab.website.service.api.exception;
 
-public class PathNotFoundException extends ServiceException {
+import top.codelab.common.exception.NotFoundException;
+
+public class PathNotFoundException extends NotFoundException implements ServiceException {
 
     public PathNotFoundException(String message) {
         super(message);
