@@ -1,4 +1,10 @@
 <#import '/html.ftl' as html>
 <@html.main>
-500
+<div class="container-fluid h-100">
+  <div class="row h-100 align-items-center justify-content-center">
+    <div class="col-8 col-md-4 bg-white rounded-xl shadow-sm p-3 border d-flex flex-wrap text-info">
+      <span class="w-100 colon">哟...出错了！请联系网站管理员！错误代码</span><span>${uuid}</span>
+    </div>
+  </div>
+</div>
 </@html.main>
