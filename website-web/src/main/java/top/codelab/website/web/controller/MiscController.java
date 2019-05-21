@@ -1,5 +1,7 @@
 package top.codelab.website.web.controller;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import top.codelab.website.service.api.MiscService;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.http.HttpServletRequest;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
@@ -19,6 +23,10 @@ class MiscController {
     private static final String VIEW_EXCEPTION = "exception";
 
     private static final String ATTR_CURRENT_DATE_TIME = "currentDateTime";
+
+    private static final String ATTR_STATUS_CODE = "statusCode";
+
+    private static final Logger logger = LogManager.getLogger();
 
     @Autowired
     private MiscService miscService;
@@ -57,7 +65,13 @@ class MiscController {
     }
 
     @GetMapping("/exception")
-    String exception() {
-        return VIEW_EXCEPTION;
+    ModelAndView exception(HttpServletRequest request) {
+        ModelAndView modelAndView = new ModelAndView(VIEW_EXCEPTION);
+        String statusCode = String.valueOf(request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE));
+        String message = (String) request.getAttribute(RequestDispatcher.ERROR_MESSAGE);
+        modelAndView.addObject(ATTR_STATUS_CODE, statusCode);
+        logger.warn("Status code: {}, message: {}", statusCode, message);
+        return modelAndView;
     }
 }
+
