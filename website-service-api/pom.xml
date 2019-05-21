@@ -12,4 +12,12 @@
   <artifactId>website-service-api</artifactId>
   <packaging>jar</packaging>
 
+  <dependencies>
+    <!-- common-exception -->
+    <dependency>
+      <groupId>${project.groupId}</groupId>
+      <artifactId>common-exception</artifactId>
+    </dependency>
+  </dependencies>
+
 </project>
