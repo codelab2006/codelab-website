@@ -11,9 +11,12 @@ import java.io.IOException;
 import java.util.UUID;
 
 public class MDCFilter extends OncePerRequestFilter {
+
+    public static final String MDC_UUID = "uuid";
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
-        try (final CloseableThreadContext.Instance ctc = CloseableThreadContext.put("uuid", UUID.randomUUID().toString())) {
+        try (final CloseableThreadContext.Instance ctc = CloseableThreadContext.put(MDC_UUID, UUID.randomUUID().toString())) {
             filterChain.doFilter(request, response);
         }
     }
