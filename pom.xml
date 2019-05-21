@@ -13,6 +13,7 @@
     <module>website-service-api</module>
     <module>website-service</module>
     <module>markdown-repository</module>
+    <module>common-exception</module>
   </modules>
 
   <name>codelab-website</name>
@@ -108,6 +109,12 @@
       <dependency>
         <groupId>${project.groupId}</groupId>
         <artifactId>markdown-repository</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <!-- common-exception -->
+      <dependency>
+        <groupId>${project.groupId}</groupId>
+        <artifactId>common-exception</artifactId>
         <version>${project.version}</version>
       </dependency>
       <!-- ************************************************* -->
