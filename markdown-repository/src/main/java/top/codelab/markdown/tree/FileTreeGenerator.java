@@ -1,6 +1,6 @@
 package top.codelab.markdown.tree;
 
-import top.codelab.markdown.exception.MarkdownRepositorInternalServerException;
+import top.codelab.markdown.exception.MarkdownRepositorInternalException;
 
 import java.io.IOException;
 import java.nio.file.FileVisitResult;
@@ -29,7 +29,7 @@ public class FileTreeGenerator {
                 }
             });
         } catch (IOException e) {
-            throw new MarkdownRepositorInternalServerException(e);
+            throw new MarkdownRepositorInternalException(e);
         }
         return fileTree;
     }
