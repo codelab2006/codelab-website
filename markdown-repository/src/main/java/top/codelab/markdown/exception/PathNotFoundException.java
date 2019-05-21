@@ -1,8 +1,6 @@
 package top.codelab.markdown.exception;
 
-import top.codelab.common.exception.NotFoundException;
-
-public class PathNotFoundException extends NotFoundException implements MarkdownRepositoryException {
+public class PathNotFoundException extends DataNotFoundException {
 
     public PathNotFoundException(String message) {
         super(message);
