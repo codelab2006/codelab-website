@@ -13,8 +13,8 @@ import java.util.Properties;
 public class MarkdownRepositoryTest {
 
     private static final String MARKDOWN_DATA_SOURCE_CONFIG = "codelab-markdown-data-source.properties";
-    private static final String MARKDOWN_DOC_PATH = "MARKDOWN_DOC_PATH";
-    private static final String MARKDOWN_RES_PATH = "MARKDOWN_RES_PATH";
+    private static final String MARKDOWN_DOC_PATH = "MARKDOWN_DOCUMENT_PATH";
+    private static final String MARKDOWN_RES_PATH = "MARKDOWN_RESOURCE_PATH";
     private static final String UNKNOWN_MARKDOWN_DOC_PATH = "unknown_markdown_doc_path";
     private static final String UNKNOWN_MARKDOWN_RES_PATH = "unknown_markdown_res_path";
 
