@@ -33,9 +33,9 @@ class MiscServiceImpl extends ServiceImpl implements MiscService {
     private String password;
 
     @Autowired
-    MiscServiceImpl(@Value("${MARKDOWN_REPOSITORY:#{null}}") String markdownRepositoryPath,
-                    @Value("${MARKDOWN_REPOSITORY_USERNAME:#{null}}") String markdownRepositoryUsername,
-                    @Value("${MARKDOWN_REPOSITORY_PASSWORD:#{null}}") String markdownRepositoryPassword,
+    MiscServiceImpl(@Value("${MARKDOWN_REPOSITORY_PATH:#{null}}") String markdownRepositoryPath,
+                    @Value("${codelab.markdown.repository.username:#{''}}") String markdownRepositoryUsername,
+                    @Value("${codelab.markdown.repository.password:#{''}}") String markdownRepositoryPassword,
                     BlogService blogService, MarkdownRepository markdownRepository) {
         super(markdownRepository);
         this.blogService = blogService;
