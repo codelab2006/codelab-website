@@ -1,4 +1,5 @@
 # codelab-website
+[![Build Status](https://travis-ci.com/codelab2006/codelab-website.svg?branch=master)](https://travis-ci.com/codelab2006/codelab-website)
 
 Ensure `CODELAB_MARKDOWN_DATA_SOURCE_CONFIG` environment variable is set and points to your markdown config file.
 
