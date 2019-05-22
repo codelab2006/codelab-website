@@ -11,8 +11,8 @@ import top.codelab.markdown.MarkdownRepository;
 class ServiceConfig {
 
     @Bean
-    public MarkdownRepository markdownRepository(@Value("${MARKDOWN_DOC_PATH:#{null}}") String documentPath,
-                                                 @Value("${MARKDOWN_RES_PATH:#{null}}") String resourcePath) {
+    public MarkdownRepository markdownRepository(@Value("${MARKDOWN_DOCUMENT_PATH:#{null}}") String documentPath,
+                                                 @Value("${MARKDOWN_RESOURCE_PATH:#{null}}") String resourcePath) {
         return new MarkdownRepository(documentPath, resourcePath);
     }
 }
