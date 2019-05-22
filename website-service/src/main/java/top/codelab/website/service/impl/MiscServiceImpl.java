@@ -66,23 +66,23 @@ class MiscServiceImpl extends ServiceImpl implements MiscService {
 
     @Override
     public void refresh() {
+        logger.info("Refreshing...");
         Optional.ofNullable(this.repository).ifPresent(repository -> {
             try {
-                logger.info("Refreshing...");
                 logger.info("Refreshing data...");
                 UsernamePasswordCredentialsProvider provider = new UsernamePasswordCredentialsProvider(this.username, this.password);
                 new Git(repository)
                         .pull()
                         .setCredentialsProvider(provider)
                         .call();
-                logger.info("Refreshing document tree...");
-                this.refreshDocumentTree();
-                logger.info("Refreshing cache...");
-                this.blogService.refreshCache();
-                logger.info("Refreshing...done");
             } catch (Exception e) {
                 logger.catching(Level.WARN, e);
             }
         });
+        logger.info("Refreshing document tree...");
+        this.refreshDocumentTree();
+        logger.info("Refreshing cache...");
+        this.blogService.refreshCache();
+        logger.info("Refreshing...done");
     }
 }
