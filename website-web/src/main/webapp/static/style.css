@@ -17,7 +17,7 @@
 .item-mr-x-container>.item-mr-2:last-child{margin-right:0!important}
 
 .w-0{width:0%!important}
-
+.avatar{width:16.5rem;height:17.5rem;background:url(avatar.svg);}
 @media (min-width:576px){
 }
 @media (min-width:768px){
