@@ -37,7 +37,6 @@
     <!-- development environment arguments -->
     <markdown.document.path>codelab-website-markdown/documents</markdown.document.path>
     <markdown.resource.path>codelab-website-markdown/resources</markdown.resource.path>
-    <res.path>codelab-website-markdown/resources</res.path>
   </properties>
 
   <dependencyManagement>
