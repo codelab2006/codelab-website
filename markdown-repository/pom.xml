@@ -18,6 +18,11 @@
       <groupId>${project.groupId}</groupId>
       <artifactId>common-exception</artifactId>
     </dependency>
+    <!-- log4j-api -->
+    <dependency>
+      <groupId>org.apache.logging.log4j</groupId>
+      <artifactId>log4j-api</artifactId>
+    </dependency>
     <!-- commons-io -->
     <dependency>
       <groupId>commons-io</groupId>
