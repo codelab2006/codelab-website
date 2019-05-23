@@ -1,13 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="INFO">
+
+  <Properties>
+    <Property name="application">codelab-website</Property>
+    <Property name="logPath">${sys:catalina.base}/logs/${application}</Property>
+    <Property name="filename">${logPath}/application.log</Property>
+    <Property name="filePattern">${logPath}/$${date:yyyy-MM}/archive-%date{yyyy-MM-dd}-%i.log.gz</Property>
+    <Property name="pattern">%date [%thread] %-5level %X{uuid} %logger{36} - %message%n</Property>
+  </Properties>
+
   <Appenders>
-    <Console name="Console" target="SYSTEM_OUT">
-      <PatternLayout pattern="%date [%thread] %-5level %X{uuid} %logger{36} - %message%n"/>
+    <Console name="console" target="SYSTEM_OUT">
+      <PatternLayout pattern="${pattern}"/>
     </Console>
+    <RollingFile name="rollingFile" fileName="${filename}"
+                 filePattern="${filePattern}">
+      <PatternLayout pattern="${pattern}"/>
+      <Policies>
+        <TimeBasedTriggeringPolicy/>
+        <SizeBasedTriggeringPolicy size="20 MB"/>
+      </Policies>
+      <DefaultRolloverStrategy max="20"/>
+    </RollingFile>
   </Appenders>
   <Loggers>
-    <Root level="DEBUG">
-      <AppenderRef ref="Console"/>
+    <Root level="INFO">
+      <AppenderRef ref="console"/>
+      <AppenderRef ref="rollingFile"/>
     </Root>
   </Loggers>
 </Configuration>
