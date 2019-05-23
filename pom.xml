@@ -33,6 +33,11 @@
     <easymock.version>4.0.2</easymock.version>
     <log4j.version>2.8.2</log4j.version>
     <org.eclipse.jgit.version>5.2.1.201812262042-r</org.eclipse.jgit.version>
+
+    <!-- development environment arguments -->
+    <markdown.document.path>${project.basedir}/../codelab-website-markdown/documents</markdown.document.path>
+    <markdown.resource.path>${project.basedir}/../codelab-website-markdown/resources</markdown.resource.path>
+    <res.path>${project.basedir}/../codelab-website-markdown/resources</res.path>
   </properties>
 
   <dependencyManagement>
@@ -283,6 +288,11 @@
           <path>/codelab-website</path>
           <port>16060</port>
           <uriEncoding>UTF-8</uriEncoding>
+          <systemProperties>
+            <MARKDOWN_DOCUMENT_PATH>${markdown.document.path}</MARKDOWN_DOCUMENT_PATH>
+            <MARKDOWN_RESOURCE_PATH>${markdown.resource.path}</MARKDOWN_RESOURCE_PATH>
+            <RES_PATH>${markdown.resource.path}</RES_PATH>
+          </systemProperties>
         </configuration>
       </plugin>
       <plugin>
