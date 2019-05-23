@@ -18,12 +18,12 @@ class WebConfig implements WebMvcConfigurer {
 
     private final String resourcePath;
 
-    private String appendTrailingSlash(String s) {
-        return s.endsWith("/") ? s : s.concat("/");
-    }
-
     WebConfig(@Value("${RES_PATH:#{null}}") String resourcePath) {
         this.resourcePath = this.appendTrailingSlash(resourcePath);
+    }
+
+    private String appendTrailingSlash(String s) {
+        return s.endsWith("/") ? s : s.concat("/");
     }
 
     @Override
