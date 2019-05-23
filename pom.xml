@@ -35,9 +35,9 @@
     <org.eclipse.jgit.version>5.2.1.201812262042-r</org.eclipse.jgit.version>
 
     <!-- development environment arguments -->
-    <markdown.document.path>${project.basedir}/../codelab-website-markdown/documents</markdown.document.path>
-    <markdown.resource.path>${project.basedir}/../codelab-website-markdown/resources</markdown.resource.path>
-    <res.path>${project.basedir}/../codelab-website-markdown/resources</res.path>
+    <markdown.document.path>codelab-website-markdown/documents</markdown.document.path>
+    <markdown.resource.path>codelab-website-markdown/resources</markdown.resource.path>
+    <res.path>codelab-website-markdown/resources</res.path>
   </properties>
 
   <dependencyManagement>
