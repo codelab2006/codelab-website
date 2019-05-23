@@ -4,6 +4,10 @@
 
 文章摘要1
 **********
+![Image](/codelab-website/resources/res.png)
+
 文章正文1
 文章正文1
 文章正文1
+
+![Image](/codelab-website/resources/res.png)

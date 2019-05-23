@@ -4,6 +4,10 @@
 
 文章摘要12
 **********
+![Image](/codelab-website/resources/res.png)
+
 文章正文12
 文章正文12
 文章正文12
+
+![Image](/codelab-website/resources/res.png)
