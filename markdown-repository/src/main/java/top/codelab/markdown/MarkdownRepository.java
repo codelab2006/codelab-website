@@ -1,6 +1,8 @@
 package top.codelab.markdown;
 
 import org.apache.commons.io.FilenameUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import top.codelab.markdown.exception.DataNotFoundException;
 import top.codelab.markdown.exception.LimitExceededException;
 import top.codelab.markdown.exception.PathNotFoundException;
@@ -25,14 +27,18 @@ public class MarkdownRepository {
     private static final String KEY_PREFIX_FILE_TREE = "file_tree_";
     private static final String KEY_PREFIX_MARKDOWN_FILES = "markdown_files_in_";
 
+    private static final Logger logger = LogManager.getLogger();
+
     private final Path documentPath;
     private final Path resourcePath;
 
     private final Cache<String, Object> cache;
 
     public MarkdownRepository(String documentPath, String resourcePath) {
-        this.documentPath = this.getPath(this.appendTrailingSlash(documentPath));
-        this.resourcePath = this.getPath(this.appendTrailingSlash(resourcePath));
+        this.documentPath = this.getAbsolutePath(documentPath);
+        logger.info("Markdown repository document path: {}", this.documentPath);
+        this.resourcePath = this.getAbsolutePath(resourcePath);
+        logger.info("Markdown repository resource path: {}", this.resourcePath);
         this.cache = new Cache<>();
         this.refreshDocumentTree();
     }
@@ -49,10 +55,10 @@ public class MarkdownRepository {
         return s.endsWith(SLASH) ? s : s.concat(SLASH);
     }
 
-    private Path getPath(String p) {
-        Path path = Paths.get(p);
+    private Path getAbsolutePath(String p) {
+        Path path = Paths.get(this.appendTrailingSlash(p)).toAbsolutePath();
         if (!Files.exists(path)) {
-            throw new PathNotFoundException(p);
+            throw new PathNotFoundException(path.toString());
         }
         return path;
     }
