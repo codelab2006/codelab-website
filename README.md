@@ -29,7 +29,7 @@ The post template:
     **********
     Enter content here
 
-An example of post:
+An example of post (`java_collections.md`):
 
     # Java Collections
     > author: Developer
