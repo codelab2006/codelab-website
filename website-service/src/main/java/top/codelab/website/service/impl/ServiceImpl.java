@@ -68,7 +68,7 @@ class ServiceImpl {
         List<String> lines = markdownFile.getLines();
         int separatorIndex = lines.indexOf(CONTENT_SEPARATOR);
         if (separatorIndex < 0) {
-            throw new IllegalFormatException("Illegal post summary: separator not found");
+            throw new IllegalFormatException("Illegal post summary: separator not found in ".concat(markdownFile.getName()));
         }
         return lines.subList(SUMMARY_BEGIN_INDEX, separatorIndex).stream()
                 .collect(Collectors.joining(System.lineSeparator()));

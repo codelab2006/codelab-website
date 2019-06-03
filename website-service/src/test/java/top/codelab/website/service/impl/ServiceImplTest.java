@@ -32,7 +32,7 @@ public class ServiceImplTest {
     private static final String PostTagsLine = "> tags: javascript,  nodejs,   java,    database";
     private static final String[] PostTags = new String[]{"javascript", "nodejs", "java", "database"};
 
-    private static final String ExceptionMessageForExtractSummary = "Illegal post summary: separator not found";
+    private static final String ExceptionMessageForExtractSummary = "Illegal post summary: separator not found in ";
 
     private static final String PostContentLine1 = "Hello world";
     private static final String PostContentLine2 = "Hello java";
@@ -122,11 +122,14 @@ public class ServiceImplTest {
 
     @Test
     public void throwsIllegalExceptionForExtractSummary() {
-        this.exception.expect(IllegalFormatException.class);
-        this.exception.expectMessage(ExceptionMessageForExtractSummary);
+        EasyMock.expect(this.markdownFile.getName())
+                .andReturn("markdown_file")
+                .times(2);
         EasyMock.expect(this.markdownFile.getLines())
                 .andReturn(Arrays.asList(PostTitleLine, PostContentLine1));
         EasyMock.replay(this.markdownFile);
+        this.exception.expect(IllegalFormatException.class);
+        this.exception.expectMessage(ExceptionMessageForExtractSummary.concat(this.markdownFile.getName()));
         serviceImpl.extractSummary(this.markdownFile);
     }
 
